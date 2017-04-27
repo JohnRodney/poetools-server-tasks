@@ -5,6 +5,6 @@ const runner = new Runner(null);
 
 runner.run();
 
-http.createServer((/* request,*/ response) => {
+http.createServer((request, response) => {
   response.write('hello');
 }).listen(process.env.PORT || 5000);
