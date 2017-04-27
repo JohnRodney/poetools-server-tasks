@@ -1,5 +1,5 @@
 import http from 'http';
-import Runner from './tasks/aggregate-names.js';
+import Runner from './tasks/poll-id';
 
 const runner = new Runner(null);
 
