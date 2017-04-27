@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "eslint src && exit 0",
-    "build": "babel src --watch -d lib"
+    "build": "babel src --watch -d lib",
+    "start": "npm install && node ./lib/index.js"
   },
   "author": "",
   "license": "ISC"
