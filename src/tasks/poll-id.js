@@ -12,10 +12,10 @@ import Mongo from '../mongo-connect';
 
 function upsertStashes(db, stashes) {
   const stashesCollection = db.collection('stashes');
-  return stashes.reduce((acc, stash) => acc.then(() => {
-    log.log('updating stash: ', stash.id);
-    return stashesCollection.replaceOne({ id: stash.id }, stash, { upsert: true });
-  }), Promise.resolve());
+  return stashes.reduce((acc, stash) => acc
+      .then(() =>
+        stashesCollection.replaceOne({ id: stash.id }, stash, { upsert: true })),
+      Promise.resolve());
 }
 
 class Runner {
