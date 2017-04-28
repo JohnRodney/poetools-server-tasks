@@ -18,7 +18,7 @@
     "test": "eslint src && exit 0",
     "build": "babel src --watch -d lib",
     "start": "npm install && node ./lib/index.js",
-    "getBatch": "./lib/index.js"
+    "getBatch": "node ./lib/index.js"
   },
   "author": "",
   "license": "ISC"
