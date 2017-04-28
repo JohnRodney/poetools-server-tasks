@@ -87,10 +87,7 @@ class Runner {
       .then(() => this.setUriToNewId(next_change_id))
       .then(() => this.updateChangeIndex(next_change_id))
       .then(() => log.log('finished'))
-      .then(() => this.run())
       .catch(err => log.dir(err));
-    // this.updateChangeIndex(db, id);
-    // this.run();
   }
 }
 
