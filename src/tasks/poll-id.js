@@ -14,7 +14,8 @@ function upsertStashes(db, stashes) {
   const stashesCollection = db.collection('stashes');
   return stashes.reduce((acc, stash) => acc
       .then(() =>
-        stashesCollection.replaceOne({ id: stash.id }, stash, { upsert: true })),
+        stashesCollection.replaceOne({ id: stash.id }, stash, { upsert: true }))
+        .then(() => Promise.resolve(log.log('replaced one'))),
       Promise.resolve());
 }
 
